@@ -1,0 +1,24 @@
+#!/bin/bash
+
+MN=`date +%m`
+NM=`date +%b`
+
+NOTES=${HOME}/Desktop/root/${MN}-${NM}-work/`date +%m-%d-%y-notes-tp`
+
+IFS=`echo -en "\n\b"`
+
+if test "$1" = "a"
+then
+    LINES=$(strings ${NOTES} | grep -v done | grep '\-=' | tr -d '\011' | sed 's/^[ ]*//')
+    for LINE in $LINES; do
+	#echo $LINE 
+	/Users/stephenfitch/bin/aof $LINE
+    done
+else
+    /bin/cat >> ${NOTES} <<EOF
+`date +%m-%d-%y` Taskpaper Notes
+
+
+EOF
+    open -a TaskPaper ${NOTES}
+fi

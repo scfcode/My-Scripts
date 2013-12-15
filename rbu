@@ -1,0 +1,7 @@
+:
+
+/Users/stephenfitch/bin/bu
+
+cd /Users/stephenfitch/Desktop/Backup-`date "+%m%d%y"`
+
+rsync -Cavz . sura.sfbay.sun.com::backup

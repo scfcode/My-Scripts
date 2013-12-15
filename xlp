@@ -1,0 +1,11 @@
+#!/bin/bash
+
+XLSP=/Users/stephenfitch/Downloads/Applications/XLSperl-0.7-OSX-Intel/XLSperl 
+
+XLSF=/Users/stephenfitch/Desktop/root/2009/04-Apr-root/accessonly/old/*.xls
+
+for i in $XLSF
+do
+   echo $i
+   $XLSP -nale 'print $F{G},"                                 ", $F{AF} if ($F{H} =~ /JSE4/)' $i
+done

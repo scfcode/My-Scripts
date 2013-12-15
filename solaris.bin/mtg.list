@@ -1,0 +1,2 @@
+:
+/usr/bin/grep -- '- Meeting '  /home/sfitch/years/2006/2006-SCRATCH-BUFFER >/web-docs/stuff/2006.meetings.txt

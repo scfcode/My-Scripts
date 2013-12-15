@@ -1,0 +1,4 @@
+#!/bin/sh
+osascript <<77
+tell application "Finder" to eject "pool_fs_backupcm"
+77

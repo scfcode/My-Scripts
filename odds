@@ -1,0 +1,7 @@
+bc <<EOF
+scale=2
+x=$1
+y=$2
+z=y/(x+y)*100
+"z=";z
+EOF

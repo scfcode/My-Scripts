@@ -1,0 +1,11 @@
+// This macro looks for url from the position of the cursor down
+// and open the first url it finds in a browser window through InfoViewer
+
+SearchAndReplace.setSearchString("\\bhttp://[^ ]+\\b");
+SearchAndReplace.setAutoWrapAround(false);
+SearchAndReplace.setReverseSearch(false);
+SearchAndReplace.setIgnoreCase(true);
+SearchAndReplace.setRegexp(true);
+SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
+SearchAndReplace.find(view);
+infoviewer.InfoViewerPlugin.openSelectedText(view);

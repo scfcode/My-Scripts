@@ -1,0 +1,26 @@
+#! /bin/ksh
+
+read NOTES?"Enter Note    : "
+
+FU=`/home/sfitch/bin/yd $1`
+DT=`date '+%d-%b-%y'`
+
+FLS=/web-docs/Files.xml
+TF1=/tmp/files.xml.tmp
+TF2=/web-docs/Files.xml.backup
+
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" > $TF1
+echo "<?xml-stylesheet type=\"text/xsl\" href=\"xslt/rows.xsl\"?>"  >> $TF1
+echo "<Files>" >> $TF1
+echo "   <File href=\"${FU}\">" >> $TF1
+echo "      <FileDate>${DT}</FileDate>" >> $TF1
+echo "      <FileNote>${NOTES}</FileNote>" >> $TF1
+echo "   </File>" >> $TF1
+
+sed '1,3d' < ${FLS} >>${TF1}
+
+cp ${FLS} ${TF2}
+mv ${TF1} ${FLS}
+
+echo $FU
+mv $1 /web-docs/lyd

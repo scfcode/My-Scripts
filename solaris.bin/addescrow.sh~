@@ -1,0 +1,16 @@
+#! /bin/ksh
+
+export OLDCOUNT=`grep COUNT JPSE-CSM-Issues.html | awk '{print $3}'`
+export NEWCOUNT=`expr $OLDCOUNT + 1`
+
+read END2?"Enter Customer Name: "
+read END3?"Enter Escalation ID: "
+read END4?"Enter Start Date: "
+read END5?"Enter End Date  : "
+
+export END2
+export END3
+export END4
+export END5
+
+$HOME/escrow.sh <$1

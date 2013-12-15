@@ -1,0 +1,6 @@
+:
+WORKCAL='./Library/Application?Support/iCal/Sources/D4D1200F-F5B5-40E3-B9CF-771321A631B8.calendar/corestorage.ics'
+cd
+/bin/cp $WORKCAL $HOME/Temp/cals/Work.ics
+$HOME/bin/ical2rem.pl  > .remical
+remind -c+2 .reminders

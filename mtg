@@ -1,0 +1,21 @@
+#!/bin/sh
+today=`date +"%d"`
+
+set cnt="01"
+
+if [ -f $HOME/bin/.mtg.count ]; then
+   day=`cat $HOME/bin/.mtg.count | awk '{print $1}'`
+   cnt=`cat $HOME/bin/.mtg.count | awk '{print $2}'`
+fi
+
+if [ "$today" = "$day" ]; then
+   cnt=`expr $cnt + 1`
+   cnt=`printf "%0.2d\n" $cnt`
+   echo "$today $cnt" >$HOME/bin/.mtg.count
+else
+   cnt="01"
+   echo "$today $cnt" >$HOME/bin/.mtg.count
+fi
+
+echo 'Enter Meeting Info'; read x
+echo "MT  : `date +"%m%d%y.$cnt"` - $x"

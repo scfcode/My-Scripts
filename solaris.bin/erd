@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "<html>" >  /tmp/erreq.html
+echo "<body>" >> /tmp/erreq.html
+echo "<pre>"  >> /tmp/erreq.html
+
+cat /web-docs/er/Requests/$1 >> /tmp/erreq.html
+
+echo "</html>" >> /tmp/erreq.html
+echo "</body>" >> /tmp/erreq.html
+echo "</pre>"  >> /tmp/erreq.html
+
+mv /tmp/erreq.html /web-docs/er/Requests/$1.html
+
+echo "http://sura.sfbay/er/Requests/$1.html"

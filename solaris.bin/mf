@@ -1,0 +1,4 @@
+:
+cp $1 /local/tmp/email/temp.email.file
+/usr/local/bin/mutt -f /local/tmp/email/temp.email.file
+rm /local/tmp/email/temp.email.file

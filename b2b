@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -e
+
+fflag=off
+while [ $# -gt 0 ]
+do
+    case "$1" in
+        -f)  fflag=on;;
+    esac
+    shift
+done
+
+$HOME/bin/mbooter
+
+BUDIR=/Volumes/pool_fs_backupcm/mac/backup/Backup-`date "+%m%d%y"`
+#BUDIR=/Volumes/poolbackup/mac/backup/Backup-`date "+%m%d%y"`
+
+BUELIST=/Users/stephenfitch/bin/bufile.exclude
+
+mkdir -p ${BUDIR}
+
+if [ "${fflag}" = "on" ]; then
+
+  BUFILE=${BUDIR}/backup-`date "+%m%d%y"`-full.tar
+  BULIST=/Users/stephenfitch/bin/bufile.full.list
+
+  tar jcbf 2 ${BUFILE} --exclude-from ${BUELIST} -T ${BULIST}
+  
+else
+
+  BUFILE=${BUDIR}/backup-`date "+%m%d%y"`.tar
+  BULIST=/Users/stephenfitch/bin/bufile.list
+  
+  tar jcvbf 131072 ${BUFILE} --exclude-from ${BUELIST} -T ${BULIST}
+
+fi
+
+$HOME/bin/ubooter

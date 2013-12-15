@@ -1,0 +1,40 @@
+#!/bin/bash
+
+aiString=""
+
+if [ $# = 1 ]; then
+	aiString="$1"
+else
+	echo "Usage: aof ai"
+fi
+
+today=`date +"%d"`
+
+set cnt="01"
+
+if [ -f $HOME/bin/.ai.count ]; then
+   day=`cat $HOME/bin/.ai.count | awk '{print $1}'`
+   cnt=`cat $HOME/bin/.ai.count | awk '{print $2}'`
+fi
+
+if [ "$today" = "$day" ]; then
+   cnt=`expr $cnt + 1`
+   cnt=`printf "%0.2d\n" $cnt`
+   echo "$today $cnt" >$HOME/bin/.ai.count
+else
+   cnt="01"
+   echo "$today $cnt" >$HOME/bin/.ai.count
+fi
+
+if [ "$aiString" = "" ]; then
+   echo 'Enter AI'; read aiString
+fi
+
+AINUM=`date +"%m%d%y.$cnt"`
+
+ai="${AINUM} ${aiString} @ Work"
+
+echo "${ai}"
+echo "${ai}" >/Users/stephenfitch/tmp/myLastAI
+
+/Users/stephenfitch/bin/add2omnifocus 

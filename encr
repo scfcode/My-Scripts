@@ -1,0 +1,7 @@
+:
+HS=/Users/stephenfitch/Data/Home/home-secure
+cd ${HS}
+mv *.gpg old/
+/usr/local/bin/gpg -a -r 'Stephen Fitch' -o ${HS}/$1.gpg --encrypt $1
+/bin/rm -f $1
+/usr/bin/file *

@@ -1,7 +1,15 @@
 #!/bin/bash -xv
 pwd
-VTMP=/Users/stephenfitch/Data/Work/root/vptmp/
 cd $HOME
+#
 pwd
-#export SSH_AUTH_SOCK=/tmp/launch-xH3tGo/Listeners
-/usr/bin/rsync --rsync-path=/usr/local/bin/rsync -rauvi --delete-after ${VTMP} scfitch@jpsescf.us.oracle.com:/home/scfitch/htdocroot/vp/ &>/tmp/x
+RSYNC=/usr/bin/rsync
+SSH=/usr/bin/ssh
+KEY=$HOME/.ssh/thishost-rsync-key
+RUSER=scfitch
+RHOST=jpsescf.us.oracle.com
+RPATH=/home/scfitch/htdocs/docs/vp/
+LPATH=/Users/stephenfitch/Data/Work/root/vptmp/
+RRSYN="--rsync-path /usr/local/bin/rsync"
+
+$RSYNC -av --size-only $RRSYN -e "$SSH -i $KEY" $RUSER@$RHOST:$RPATH $LPATH &>/tmp/x

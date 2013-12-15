@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [[ $(df | grep -q MACOS_FDRV )$? == 1 ]]; then 
+ echo "USB stick not mounted"
+ exit
+fi
+
+YEAR=`date "+%Y"`
+MONT=`date "+%m"`
+
+MDY=`date "+%m%d%y"`
+
+BUD="/Volumes/MACOS_FDRV/backup/email/${YEAR}/${MONT}"
+
+/bin/mkdir -p ${BUD}
+
+INB=/Archive/root/Work/Work-Email/nss-mail/Inbox
+
+/sw/bin/gzip -9c ${INB} > ${HOME}/tmp/Inbox.${MDY}.gz
+
+/bin/mv ${HOME}/tmp/Inbox.${MDY}.gz ${BUD}/Inbox.${MDY}
+
+/bin/ls -l ${BUD}
+
+/bin/sync
+
+DISK=`diskutil list | grep MACOS_FDRV | awk '{print $6}'`
+/usr/sbin/diskutil umount ${DISK}
+#
+/usr/sbin/diskutil umount /Volumes/DOS_FDRV

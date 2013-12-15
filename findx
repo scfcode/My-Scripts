@@ -1,0 +1,3 @@
+#!/bin/sh
+ssh -l sfitch jpsescf.sfbay.sun.com '(cd /zhome/sfitch/jpsescf/root/apache22/htdocs/docs/vp; mv index.html iindex.html)'
+ssh -l sfitch jpsescf.sfbay.sun.com 'bin/vplist'

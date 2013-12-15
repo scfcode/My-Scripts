@@ -1,0 +1,2 @@
+:
+/net/hestia.sfbay.sun.com/u0/tools/bin/vncviewer various.sfbay:0 >/tmp/vnc.various.output.delete.me 2>&1 &

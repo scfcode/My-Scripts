@@ -1,0 +1,4 @@
+#!/bin/ksh
+export LD_LIBRARY_PATH=/opt/csw/lib:/opt/fsw4sun/pgsql-7.4.6/lib/
+cd /l/s/psi/psi-0.10-test3
+exec ./psi

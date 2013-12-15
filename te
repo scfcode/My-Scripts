@@ -1,0 +1,10 @@
+:
+
+MN=`date +%m`
+NM=`date +%b`
+
+NOTES=~/Desktop/Inbox/${MN}-${NM}-work/`date +%m-%d-%y-notes`
+
+/usr/bin/touch ${NOTES}
+
+open -a Smultron ${NOTES}

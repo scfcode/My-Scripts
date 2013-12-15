@@ -1,0 +1,39 @@
+#! /usr/bin/perl
+
+# XLSgrep - search inside Microsoft Excel files
+#
+# Usage:   XLSgrep <search_pattern> file1 file2 ... fileX
+#          cat file.xls | XLSgrep <search_pattern>
+#
+# Example: XLSgrep "[A-Z]\d{4,5}" cells.xls
+#
+# Written by Jon Allen (JJ) <jj@jonallen.info>
+# http://perl.jonallen.info/projects/xlstools
+#
+# This program is free software - you may distribute it
+# and/or modify it under the same terms as Perl itself.
+# See http://perldoc.perl.org/index-license.html for details.
+
+
+use strict;
+use warnings;
+use open IN => ":bytes";
+use Spreadsheet::ParseExcel;
+ 
+my $pattern = shift @ARGV or die("Search pattern must be supplied\n");
+my $excel   = Spreadsheet::ParseExcel->new(
+  NotSetCell  => 1,
+  CellHandler => sub {
+    my ($workbook,$sheet_index,$row,$col,$cell) = @_;
+    if (my $value = $cell->Value) {
+      chomp $value;
+      print "$value\n" if ($value =~ /$pattern/);
+    }
+  }
+);
+
+undef $/;
+while (<>) {
+  $excel->Parse(\$_);
+}
+

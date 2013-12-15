@@ -1,0 +1,24 @@
+#!/bin/bash
+cd /Users/stephenfitch/Desktop/root/notes
+
+IFILE=notes-hotcusts
+OFILE=notes-hotcusts.html
+TFILE=tmp.notes-hotcusts
+MFILE=notes-hotcusts.out
+
+rm -f $TFILE
+echo >> $TFILE 
+date >> $TFILE
+echo >> $TFILE
+grep \<\<$ $IFILE | sed 's/ <<//' | sed 's/^/\* /' >> $TFILE
+echo >> $TFILE
+echo "--------------------------" >> $TFILE
+echo >>$TFILE
+
+cat $TFILE $IFILE > $MFILE
+
+/usr/bin/txt2html --outfile $OFILE $MFILE 
+
+scp notes-hotcusts sfitch@jpsescf.sfbay.sun.com:./htdocroot/notes-hotcusts
+scp notes-hotcusts.html sfitch@jpsescf.sfbay.sun.com:./htdocroot/notes-hotcusts.html
+

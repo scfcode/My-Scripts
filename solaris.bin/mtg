@@ -1,0 +1,88 @@
+#!/net/hestia/u0/tools/bin/ruby -w
+
+#    Summary: Sustaining FY07 Planning meetings
+#      Start: Thursday, July 20, 2006 1:00:00 PM GMT-07:00
+#        End: Thursday, July 20, 2006 5:00:00 PM GMT-07:00
+#   Location: SCA04 Clocktower - Bowers CR
+#
+#Description: 
+#Day 2
+#FY07 Goal discussion (2 h)
+#15 Min Break
+#Solidify FY06 goals (~2 h)
+
+# Ruby to convert this type of content to:
+
+# dd-mon-yy-h1:m1 - h2:m2 - Meetings - Summary
+#  .
+#  Location
+#  Description contents here....
+#
+
+# Start: Thursday, July 20, 2006 1:00:00 PM GMT-07:00
+# Xform to: 20-Jul-06
+# Same for End: string
+
+require 'date'
+require 'parsedate'
+
+text = STDIN.read
+lines = text.split("\n")
+
+dl = 0
+n = lines.length
+
+for line in lines do
+  if line.match(/Summary:/i)
+    su = line.chomp.split(/:/)
+  end
+  if line.match(/Start:/i)
+    st = line.chomp.split(/: /)
+  end
+  if line.match(/End:/i)
+    en = line.chomp.split(/: /)
+  end
+  if line.match(/Location:/i)
+    lo = line.chomp.split(/:/)
+  end
+  if line.match(/Description:/i)
+    dl = lines.index(line)
+  end
+end 
+
+s = st[1]
+sta = s.split(/ /)
+mon = sta[1].slice(0..2)
+day = sta[2].chomp(",")
+yea = sta[3].slice(2..-1)
+if (sta[4].length == 7)
+ stim = "0"+sta[4]
+else
+ stim = sta[4]
+end
+
+e = en[1]
+eta = e.split(/ /)
+if (eta[4].length == 7)
+ etim = "0"+eta[4]
+else
+ etim = eta[4]
+end
+
+s_t = stim.slice(0..-4)
+e_t = etim.slice(0..-4)
+
+sum = su[1].lstrip
+
+printf("\n\n")
+printf("%s-%s-%s-%s - %s - Meeting - %s\n", day, mon, yea, s_t, e_t, sum )
+printf(" .\n")
+printf(" Location   : %s \n\n", lo[1].lstrip)
+printf(" Description:\n\n")
+i = dl+1
+while i < n do
+ printf(" %s\n", lines[i])
+ i = i + 1
+end
+printf("\n")
+

@@ -1,0 +1,40 @@
+#!/usr/sbin/dtrace -s
+
+#pragma D option quiet
+
+pid$target:libSystem.B.dylib::entry,
+pid$target:libSystem.B.dylib::return
+{
+	printf("%s %s", execname, copyinstr(arg0));
+}
+
+ERROR
+/self->level < 0 || self->level > 40/
+{
+	self->level = 0;
+}
+
+ERROR
+{
+	this->p = ((dtrace_state_t *)arg0)->dts_ecbs[arg1 - 1]->dte_probe;
+	this->mod = this->p->dtpr_mod;
+	this->func = this->p->dtpr_func;
+	this->entry = ("entry" == stringof(this->p->dtpr_name));
+}
+
+ERROR
+/this->entry/
+{
+	printf("%*s-> %s:%s\n", self->level * 2, "",
+	    stringof(this->mod), stringof(this->func));
+	self->level++;
+}
+
+ERROR
+/!this->entry/
+{
+	self->level--;
+	printf("%*s<- %s:%s\n", self->level * 2, "",
+	    stringof(this->mod), stringof(this->func));
+}
+

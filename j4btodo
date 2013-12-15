@@ -1,0 +1,11 @@
+#!/bin/bash
+
+$HOME/bin/jtoascii 668
+$HOME/bin/jtoascii 667
+$HOME/bin/jtoascii 666
+$HOME/bin/jtoascii 665
+$HOME/bin/jtoascii 664
+$HOME/bin/jtoascii 663
+$HOME/bin/jtoascii 662
+$HOME/bin/jtoascii 661
+

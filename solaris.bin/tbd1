@@ -1,0 +1,3 @@
+#!/bin/ksh
+export DISPLAY=sura:0.1
+/l/p/thunderbird/latest/thunderbird &

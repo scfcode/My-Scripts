@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# 21-Feb-07-13:00-15:00-16:00 - Meeting - i - Java SE PAC
+
+DIR=/Users/stephenfitch/Desktop/Work/Work-Content
+DOC=${DIR}/2007-SB
+IMD=${DIR}/imtg.tmp
+TMD=${DIR}/2007-SB.tmp
+
+cd ${DIR}
+
+if [ "$1" = "" ]; then
+   echo "Usage: imtg [i|e] [stime] [etime] [meeting title]"
+   exit 1
+fi
+
+echo "`date +%d-%b-%y`-$2-$3 - Meeting - $1 - $4" >${IMD}
+
+cat ${IMD} ${DOC} > ${TMD}
+
+cp ${TMD} ${DOC}

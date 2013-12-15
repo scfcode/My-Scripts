@@ -1,0 +1,76 @@
+
+#!/bin/bash
+# Take a census of some Oracle VPN access points
+# Script seems to work on Mac OS X 10.6.8,  Linux CentOS 5.7, and Solaris 10
+# j.henning 3/2012
+
+Count=3              # how many pings
+TotalTimeMax=10      # total seconds allowed to be spent on any one host
+IncludeSummary=false # set to true to include stats lines
+
+# first group: US points, alphabetical order
+# second group: other geos, alphabetical
+# lastly: the recommended one
+TryMe=(\
+adc-twvpn-1.oraclevpn.com \
+adc-twvpn-2.oraclevpn.com \
+adc-twvpn-3.oraclevpn.com \
+rmdc-twvpn-1.oraclevpn.com \
+rmdc-twvpn-2.oraclevpn.com \
+whq-twvpn-1.oraclevpn.com \
+whq-twvpn-2.oraclevpn.com \
+\
+london-twvpn-1.oraclevpn.com \
+london-twvpn-2.oraclevpn.com \
+singapore-twvpn-1.oraclevpn.com \
+sydney-twvpn-1.oraclevpn.com \
+tokyo-twvpn-1.oraclevpn.com \
+\
+myaccess.oraclevpn.com
+\ )
+
+os=`uname`
+if [[ $os == "SunOS" ]] 
+then
+   cmd="/usr/sbin/ping -s "
+   cmdsuffix=" 56 $Count | /usr/xpg4/bin/grep -e 'bytes from' "
+   if $IncludeSummary
+   then
+      cmdsuffix="$cmdsuffix -e round-trip"
+   fi
+elif [[ $os == "Darwin" ]]
+then 
+   cmd="/sbin/ping -c $Count -t $TotalTimeMax "
+   cmdsuffix=" | /usr/bin/grep -e 'bytes from' "
+   if $IncludeSummary
+   then
+      cmdsuffix="$cmdsuffix -e round-trip"
+   fi
+elif [[ $os == "Linux" ]]
+then
+   cmd="/bin/ping -c $Count -w $TotalTimeMax "
+   cmdsuffix=" | /bin/grep -e 'bytes from' "
+   if $IncludeSummary
+   then
+      cmdsuffix="$cmdsuffix -e rtt"
+   fi
+else
+   echo "I dunno syntax for your ping, sorry"
+   exit
+fi
+echo "Using command: $cmd HOST $cmdsuffix"
+echo
+
+for host in ${TryMe[@]} 
+do
+   if [[ $os == "Darwin" ]]
+   then
+      echo $host
+   fi
+   doit="$cmd $host $cmdsuffix"
+   #echo "'$doit'"
+   eval $doit 
+   echo
+done
+
+

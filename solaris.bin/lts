@@ -1,0 +1,3 @@
+:
+rm -f latest
+ln -s `pwd`/$1 latest

@@ -1,0 +1,9 @@
+#!/bin/sh 
+
+if test "$1" = "a"; then 
+    DT=`date`
+    echo "$DT - $2" >> /Archive/root/Home/home-content/Money.Found
+fi 
+if test "$1" = "t"; then 
+    /usr/bin/awk -f $HOME/bin/cents.awk < /Archive/root/Home/home-content/Money.Found
+fi

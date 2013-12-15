@@ -1,0 +1,29 @@
+# ruby sample code. 
+
+file='/Users/sfitch/Desktop/root/OmniFocus.html'
+
+f = File.open(file, "r") 
+f.each_line { |line| 
+ l=nil
+ l=line.index('>http')
+ if l != nil then
+   a = nil
+   l=line.index('">')
+   n=line.index('</td>')
+   if n != nil then
+     u=line[l+2..n-1] 
+     if u.index('h') == 0 then
+       a=line[0..l] + '><a href="' + u +'">' + u + '</a></td>'
+       #puts a
+       #puts line
+     end
+   end
+ end
+ if a != nil then
+  puts a
+ else
+  puts line
+ end
+}
+
+f.close 

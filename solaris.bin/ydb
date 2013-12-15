@@ -1,0 +1,6 @@
+#!/bin/sh
+
+D1=`date '+%d-%m-%y'`
+D2=`date '+20%y/%m'`
+
+echo "* ${D1} - $1 - http://sura.sfbay/yd/${D2}/$2"

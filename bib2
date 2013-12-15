@@ -1,0 +1,39 @@
+#!/bin/sh
+
+DISK=""
+DISK=`disktool -l | grep MACOS_FDRV | awk -F\' '{print $2}'`
+
+MNTP=""
+MNTP=`disktool -l | grep MACOS_FDRV | awk -F\' '{print $4}'`
+
+if [[ $DISK == "" ]]; then 
+ echo "USB stick not available"
+ exit
+fi
+
+/usr/sbin/disktool -m $DISK
+
+YEAR=`date "+%Y"`
+MONT=`date "+%m"`
+
+MDY=`date "+%m%d%y"`
+
+BUD="$MNTP/backup/email/${YEAR}/${MONT}"
+
+echo $BUD
+
+/bin/mkdir -p ${BUD}
+
+INB=/Archive/root/Work/Work-Email/nss-mail/Inbox
+
+/bin/sync
+
+/sw/bin/gzip -9c ${INB} > ${HOME}/tmp/Inbox.${MDY}.gz
+
+/bin/mv ${HOME}/tmp/Inbox.${MDY}.gz ${BUD}/Inbox.${MDY}
+
+/bin/ls -l ${BUD}
+
+/bin/sync
+
+/usr/sbin/disktool -u $DISK

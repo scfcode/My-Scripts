@@ -1,0 +1,20 @@
+:
+MAIL_LOC=/Users/stephenfitch/Library/Thunderbird/Profiles/6g7tns11.default/ImapMail/mail.oracle.com
+
+BKUP_LOC=${HOME}/Backup/work/Backup_Oracle_IMAP
+
+BKUP_FILE=${BKUP_LOC}/IMAP_Backup.tar.gz
+
+cd ${MAIL_LOC}
+
+/bin/rm -f ${BKUP_FILE}.gpg
+
+/usr/bin/tar czf ${BKUP_FILE} ./
+
+/usr/local/bin/gpg -a -r 'Stephen Fitch' -o ${BKUP_FILE}.gpg --encrypt ${BKUP_FILE}
+
+/bin/rm -f ${BKUP_FILE}
+/bin/cp ${BKUP_FILE}.gpg $HOME/Dropbox/Backup
+
+
+	

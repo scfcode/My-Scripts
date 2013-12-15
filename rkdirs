@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd $HOME/Desktop/root
+
+MN=`date +%m`
+NM=`date +%b`
+
+/bin/mkdir "${MN}-${NM}-root"

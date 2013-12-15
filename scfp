@@ -1,0 +1,7 @@
+#!/bin/bash
+
+FILENAME=$1
+TODIR=/Users/sfitch/tmp
+
+scp sfitch@jpsescf:/home/sfitch/${FILENAME} ${TODIR}/$FILENAME
+find $TODIR -name ${FILENAME} -print

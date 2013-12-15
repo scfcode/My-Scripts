@@ -1,0 +1,3 @@
+#!/bin/bash
+/Users/stephenfitch/bin/hotcus > /Users/stephenfitch/tmp/hotcus.txt
+/Applications/Thunderbird.app/Contents/MacOS/thunderbird-bin -P cli  --compose "to='jpse-csm@sun.com',subject='Hot Customer List',body='Hot Customer List',attachment='file:///Users/stephenfitch/tmp/hotcus.txt'"

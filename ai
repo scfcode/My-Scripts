@@ -1,0 +1,48 @@
+#!/bin/sh
+
+igtdContext=""
+aiString=""
+
+if [ $# = 1 ]; then
+	igtdContext=""
+	aiString="$1"
+fi
+if [ $# = 2 ]; then
+	igtdContext="$1"
+	aiString="$2"
+else
+	echo "Usage: [@context] ai"
+fi
+
+today=`date +"%d"`
+
+set cnt="01"
+
+if [ -f $HOME/bin/.ai.count ]; then
+   day=`cat $HOME/bin/.ai.count | awk '{print $1}'`
+   cnt=`cat $HOME/bin/.ai.count | awk '{print $2}'`
+fi
+
+if [ "$today" = "$day" ]; then
+   cnt=`expr $cnt + 1`
+   cnt=`printf "%0.2d\n" $cnt`
+   echo "$today $cnt" >$HOME/bin/.ai.count
+else
+   cnt="01"
+   echo "$today $cnt" >$HOME/bin/.ai.count
+fi
+
+if [ "$aiString" = "" ]; then
+   echo 'Enter AI'; read aiString
+fi
+
+AINUM=`date +"%m%d%y.$cnt"`
+
+if [ "$igtdContext" = "" ]; then
+   ai="${AINUM} - ${aiString}"
+else
+   ai="${igtdContext} ${AINUM} - ${aiString}"
+fi
+
+echo "${ai}"
+#/usr/local/bin/sendtoigtd "${ai}"

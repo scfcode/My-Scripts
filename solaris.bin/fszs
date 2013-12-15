@@ -1,0 +1,17 @@
+:
+du -d -k $1 >/var/tmp/input_file 2>&1
+
+nawk '{
+        if ($1 ~ ".*G") {
+                sub("G", "", $1); $1*=1024*1024
+        } else {
+                if ($1 ~ ".*M") {
+                        sub("M", "", $1); $1*=1024
+                } else {
+                        if ($1 ~ ".*K") {
+                                sub("K", "", $1)
+                        }
+                }
+        }
+        printf("%dK %s\n", $1, $2)
+}'  /var/tmp/input_file | sort -nr

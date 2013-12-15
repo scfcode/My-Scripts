@@ -1,0 +1,11 @@
+tell application "Journler"
+
+	set anEntry to make new entry
+	set the name of anEntry to "My New Entry"
+	set the rich text of anEntry to "My new entry has content!"
+	set aVariable to "Good Stuff"
+	set the tags of anEntry to aVariable
+	set aVariable to "junk"
+	set the category of anEntry to aVariable
+
+end tell

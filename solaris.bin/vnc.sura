@@ -1,0 +1,26 @@
+#!/sbin/sh
+#
+# Copyright 2004 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+#
+
+case "$1" in
+'start')
+	#/net/hestia.sfbay/u0/tools/bin/vnc start -geometry 1280x1024 sura
+	/net/hestia.sfbay/u0/tools/bin/vnc start -geometry 1600x1200 sura
+	;;
+
+'stop')
+	/net/hestia.sfbay/u0/tools/bin/vnc end sura
+	;;
+'view')
+	/net/hestia.sfbay.sun.com/u0/tools/bin/vncviewer sura.sfbay:2
+	;;
+
+*)
+	echo "Usage: $0 { start | stop | view }"
+	exit 1
+	;;
+
+esac
+exit 0

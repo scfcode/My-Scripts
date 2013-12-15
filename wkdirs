@@ -1,0 +1,11 @@
+#!/bin/sh
+
+cd $HOME/Desktop/root
+
+MN=`date +%m`
+NM=`date +%b`
+
+/bin/mkdir "${MN}-${NM}-work"
+/bin/mkdir "${MN}-${NM}-home"
+/bin/mkdir "${MN}-${NM}-dwld"
+/bin/mkdir "${MN}-${NM}-prdj"

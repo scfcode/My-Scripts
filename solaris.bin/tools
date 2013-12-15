@@ -1,0 +1,11 @@
+:
+rm /tmp/*.delete.me
+
+/home/sfitch/bin/textclock >/tmp/textclock.output.delete.me 2>&1 & 
+/home/sfitch/bin/em >/tmp/email.output.delete.me 2>&1 & 
+/l/p/freemind/latest/freemind.sh >/tmp/freemind.output.delete.me 2>&1 &
+/l/p/firefox/latest/firefox  >/tmp/firefox.output.delete.me 2>&1 &
+/home/sfitch/bin/jedit  >/tmp/jedit.output.delete.me 2>&1 &
+/home/sfitch/bin/psi  >/tmp/psi.output.delete.me 2>&1 &
+#/l/p/mozilla/seamonkey/1.0.1/seamonkey >/tmp/sm.output.delete.me 2>&1 &
+#/l/p/thunderbird/latest/thunderbird >/tmp/thunderbird.output.delete.me 2>&1 & 

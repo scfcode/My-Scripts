@@ -1,0 +1,2 @@
+:
+exec ssh -l scfitch jpsescf.us.oracle.com

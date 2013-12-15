@@ -1,0 +1,4 @@
+:
+/usr/local/bin/rsync -v --rsync-path=/opt/csw/bin/rsync \
+                     --recursive -p -o -g -z --stats --progress \
+                     --copy-links --exclude="- /so" . kuta::local_backup

@@ -1,0 +1,21 @@
+#!/bin/sh
+today=`date +"%d`
+
+set cnt="01"
+
+if [ -f $HOME/bin/.ai.count ]; then
+   day=`cat $HOME/bin/.ai.count | awk '{print $1}'`
+   cnt=`cat $HOME/bin/.ai.count | awk '{print $2}'`
+fi
+
+if [ "$today" = "$day" ]; then
+   cnt=`expr $cnt + 1`
+   cnt=`printf "%0.2d\n" $cnt`
+   echo "$today $cnt" >$HOME/bin/.ai.count
+else
+   cnt="01"
+   echo "$today $cnt" >$HOME/bin/.ai.count
+fi
+
+echo 'Enter AI'; read x
+echo "AI  : `date +"%m%d%y.$cnt` - $x"

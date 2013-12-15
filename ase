@@ -1,0 +1,12 @@
+#!/bin/bash
+
+WURL="https://webescprod.central.sun.com:8080/servlet/com.sun.webesc.control.TechEscViewAll?CpreEscID=${1}"
+
+SURL=$1
+
+EURL=$(echo -n ${WURL} | \
+perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg');
+
+curl  "http://surl.eng.sun.com/add?s=${SURL}&u=${EURL}&p=1" > ${HOME}/bin/ase.log 2>&1  
+
+echo "http://surl.eng.sun.com/${SURL}"

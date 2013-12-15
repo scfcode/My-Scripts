@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /Users/sfitch
+/usr/bin/rsync --rsync-path=/usr/local/bin/rsync -avi --delete  /Users/sfitch/Documents/Shelf/vptmp/ sfitch@jpsescf.sfbay.sun.com:/home/sfitch/htdocroot/vp

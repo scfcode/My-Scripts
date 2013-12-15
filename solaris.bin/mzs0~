@@ -1,0 +1,3 @@
+!#/bin/ksh
+export DISPLAY=sura:0.0
+/l/p/mozilla/latest/mozilla -P "Spare User" &'

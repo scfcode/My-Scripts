@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Clippings</key>
+	<array>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,/</string>
+			<key>DateLastUsed</key>
+			<string>2010-04-05T12:55:55Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>**// Entry -&gt; %m-%d-%y - %H:%M - 
+</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>244</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,1s</string>
+			<key>Creation Date</key>
+			<string>2009-09-24T17:13:12Z</string>
+			<key>DateLastUsed</key>
+			<string>2010-02-24T12:00:23Z</string>
+			<key>Modification Date</key>
+			<string>2009-09-24T17:15:14Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://surl.eng.sun.com/JFB_OneStop_Page</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>7</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,1sig</string>
+			<key>Creation Date</key>
+			<string>2009-09-30T05:59:39Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-10-28T10:58:36Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Stephen
+ Java for Business Team 
+  http://surl.eng.sun.com/JFB_OneStop_Page 
+</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>14</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,di</string>
+			<key>DateLastUsed</key>
+			<string>2008-10-21T15:40:43Z</string>
+			<key>Modification Date</key>
+			<string>2009-06-16T06:04:33Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Dialing in now...</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,j</string>
+			<key>DateLastUsed</key>
+			<string>2009-10-26T08:50:50Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>&lt;j4b&gt; -=</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,jl</string>
+			<key>Creation Date</key>
+			<string>2009-10-26T08:50:57Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://surl.eng.sun.com/JFB_OneStop_Page 
+
+http://surl.eng.sun.com/JFB_OneStop_FAQ
+
+http://surl.eng.sun.com/JavaSE_Use_Cases </string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,mt</string>
+			<key>Creation Date</key>
+			<string>2009-06-16T15:47:03Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string> PT:ET:IR
+ 06:09 14 -  07:10:15 - 
+ 08:11:16 - 
+ 09:12:17 -     
+ 10:13:18 - 
+ 11:14:19 - 
+ 12:15:-- - 
+ 13:16:-- - 
+ 14:17:-- - 
+ 15:18:-- - 
+ 16:19:-- - 
+ 17:20:-- -  
+</string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,ncu</string>
+			<key>Creation Date</key>
+			<string>2009-08-05T08:07:00Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-08-05T14:26:57Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2009-08-05T08:07:18Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>* Java for Business Website Access Req. &lt;&lt; CUSTOMERNAME &gt;&gt;
+
+Please provide access for:
+
+------------------------------------------------------------------------------
+  Company                  :: 
+  First Name               :: 
+  Last Name                :: 
+  Role                     :: 
+  Email                    :: 
+  Phone #                  :: 
+  Address                  :: 
+  Address                  :: 
+  Address                  :: 
+  Address                  :: 
+  Product purchased        :: Java SE for Business 
+  Start Date               :: 
+  Contract / Sales Order # :: 
+  Sales Representative     :: 
+  Sales dollar value       :: 
+
+------------------------------------------------------------------------------</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,ost</string>
+			<key>Creation Date</key>
+			<string>2009-08-04T07:35:48Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2009-10-08T05:12:17Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://surl.eng.sun.com/JFB_OneStop_Page</string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,se</string>
+			<key>Creation Date</key>
+			<string>2009-07-16T13:45:11Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-10-26T06:58:55Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>.... See email I just sent subject = : </string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>14</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,sit</string>
+			<key>Creation Date</key>
+			<string>2009-07-28T09:36:08Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-08-12T09:21:04Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2009-07-28T09:59:05Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>CUSTOMER            :
+CONTRACT            :
+PRODUCT             : Java SE
+STATE               : Unstable
+ESC ID              :
+Bug ID              :
+SVCS Case ID        :
+START DATES         : CASE: dd-mmm-yy - JPSE: dd-mmm-yy
+
+PROBLEM DESCRIPTION :
+- Description
+
+IMPACT              :
+- Unclear
+
+CURRENT STATUS      :
+- Unclear
+
+ACTION PLAN         :
+- Unclear
+
+FULL DETAILS        :
+ n/a
+
+JPSE CONTACTS       : 
+
+ Aaa / Bbb
+</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,sita</string>
+			<key>DateLastUsed</key>
+			<string>2009-07-02T09:52:23Z</string>
+			<key>Modification Date</key>
+			<string>2009-07-28T09:58:56Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>CUSTOMER            :PRODUCT             : Java SESTATE               :ESC ID              :Bug ID              :SVCS Case ID        :START DATES         : CASE: dd-mmm-yy - JPSE: dd-mmm-yyPROBLEM DESCRIPTION :-- IMPACT:CURRENT STATUS      :***ACTION PLAN         :***FULL DETAILS        : http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid= http://esc.sfbay.sun.com/esc.cgi?esc= http://monaco.sfbay/detail.jsf?cr=JPSE CONTACTS       : </string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>12</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,uc</string>
+			<key>Creation Date</key>
+			<string>2009-09-28T14:46:07Z</string>
+			<key>DateLastUsed</key>
+			<string>2010-04-05T15:12:51Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>1. Solaris components
+    * Examples : Solaris Installer
+    * Supported via : Solaris/OpenSolaris Support contract
+2. Oracle/Sun Products
+    * Examples : ORCL.Fusion, ORCL.WebLogic, Sun.Glassfish, Sun.JavaCAPs
+    * Supported via : ORCL/Sun Product Specific Support Contract
+3. 3rd Party (ISV) Applications
+    * Examples : Websphere, SAP Business Suite
+    * Supported via : ISV support (JFB) contract
+4. Internally developed customer applications deployed on
+   Solaris, Windows, or Linux using Java versions: v1.4.2, 5.0, or 6
+   (note: not apps deployed in Web Containers)
+    * Examples : Customer specific apps.
+    * Supported via : Java SE for Business contract</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>18</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>,ucl</string>
+			<key>Creation Date</key>
+			<string>2009-10-14T13:59:27Z</string>
+			<key>DateLastUsed</key>
+			<string>2010-03-05T15:53:15Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://surl.eng.sun.com/JavaSE_Use_Cases</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>14</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>bmm</string>
+			<key>Creation Date</key>
+			<string>2008-11-20T18:51:46Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-10-06T06:33:51Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2008-11-20T18:53:18Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>bm-%m-%d-%y</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>20</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>buge</string>
+			<key>DateLastUsed</key>
+			<string>2010-02-23T13:14:07Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://monaco.sfbay/detail.jsf?cr=</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>182</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>caseb</string>
+			<key>Creation Date</key>
+			<string>2009-07-02T10:02:46Z</string>
+			<key>DateLastUsed</key>
+			<string>2010-04-01T06:56:18Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2009-07-02T10:03:19Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://borges.red.iplanet.com:8081/cgi-bin2/sr_summary.pl?issueid=</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>62</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>casee</string>
+			<key>DateLastUsed</key>
+			<string>2009-08-19T07:22:55Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid=</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>30</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>cjpt</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Corporate JRE P-Team</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>cjr</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Corp.JRE</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>Cmm</string>
+			<key>DateLastUsed</key>
+			<string>2009-05-27T09:26:37Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2008-10-10T12:36:35Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>CUSTOMER: NAME
+ / 5-L-SVC-ENG
+  Case : http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid=
+  Esc  : http://esc.sfbay.sun.com/esc.cgi?esc=
+  Bug  : http://monaco.sfbay/detail.jsf?cr=
+  Alert: 
+  Rel  :
+  Con  :</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>26</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>cmmm</string>
+			<key>Creation Date</key>
+			<string>2008-10-16T05:23:27Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-05-27T09:25:09Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2008-11-23T14:32:09Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string> CUSTOMER : NAME
+          : 5 - L/W/S - SVC - ENG
+          : 
+ Case     : http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid=
+ Esc      : http://esc.sfbay.sun.com/esc.cgi?esc=
+ Bug      : http://monaco.sfbay/detail.jsf?cr=
+ Alert    : 
+ Rel      :
+ Con      : </string>
+			<key>RTFD</key>
+			<data>
+			cnRmZAAAAAADAAAAAgAAAAcAAABUWFQucnRmAQAAAC4bAgAAKwAA
+			AAEAAAATAgAAe1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcY29jb2Fy
+			dGY5NDlcY29jb2FzdWJydGYzNTAKe1xmb250dGJsXGYwXGZuaWxc
+			ZmNoYXJzZXQwIE1vbmFjbzt9CntcY29sb3J0Ymw7XHJlZDI1NVxn
+			cmVlbjI1NVxibHVlMjU1O30KXHBhcmRcdHg1NjBcdHgxMTIwXHR4
+			MTY4MFx0eDIyNDBcdHgyODAwXHR4MzM2MFx0eDM5MjBcdHg0NDgw
+			XHR4NTA0MFx0eDU2MDBcdHg2MTYwXHR4NjcyMFxxbFxxbmF0dXJh
+			bFxwYXJkaXJuYXR1cmFsCgpcZjBcZnMyNCBcY2YwICBDVVNUT01F
+			UiA6IE5BTUVcCiAgICAgICAgICA6IDUgLSBML1cvUyAtIFNWQyAt
+			IEVOR1wKICAgICAgICAgIDogXAogQ2FzZSAgICAgOiBodHRwOi8v
+			cHRzLnJlZC5pcGxhbmV0LmNvbS9jZ2ktYmluL3JhZGlhbmNlLnBs
+			P2lzc3VlaWQ9XAogRXNjICAgICAgOiBodHRwOi8vZXNjLnNmYmF5
+			LnN1bi5jb20vZXNjLmNnaT9lc2M9XAogQnVnICAgICAgOiBodHRw
+			Oi8vbW9uYWNvLnNmYmF5L2RldGFpbC5qc2Y/Y3I9XAogQWxlcnQg
+			ICAgOiBcCiBSZWwgICAgICA6XAogQ29uICAgICAgOiB9AQAAACMA
+			AAABAAAABwAAAFRYVC5ydGYQAAAAAAAAALYBAAAAAAAAAAAAAA==
+			</data>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>cts</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Changing the subject...</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>cuss</string>
+			<key>DateLastUsed</key>
+			<string>2009-06-20T19:25:54Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>
+ CUSTOMER: 
+  Case : http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid=
+  Esc  : http://esc.sfbay.sun.com/esc.cgi?esc=
+  Bug  : http://monaco.sfbay/detail.jsf?cr=
+</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>Cust</string>
+			<key>DateLastUsed</key>
+			<string>2009-11-18T08:35:22Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Customer        :Meeting Minutes : &lt;DATE&gt;Call Schedule   : INTERNAL --------
+ Date           : Friday, 04/06/07 Time           : 8:00am PT / 9:00am MT / 11:00am ET
+E-mail Alias    : 
+
+Attendance:[x] Mark Susko    – Java Sustaining Escalation Manager[x] Stephen Fitch - Java Sustaining Escalation Manager[x] Owen Stuart   - Java Sustaining Escalation ManagerDiscussion:Customer Schedule:Action Items: &lt;DATE.#&gt; ACTION:  OWNER:  DUE: &lt;DATE&gt;</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>6</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>escc</string>
+			<key>DateLastUsed</key>
+			<string>2009-04-08T11:21:01Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>http://esc.sfbay.sun.com/esc.cgi?esc=</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>42</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>fnq</string>
+			<key>Creation Date</key>
+			<string>2008-09-26T11:29:06Z</string>
+			<key>DateLastUsed</key>
+			<string>2010-01-20T11:12:46Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2009-06-16T06:04:48Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>note-%m-%d-%y-%H:%M</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>124</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>gmorn</string>
+			<key>DateLastUsed</key>
+			<string>2009-06-17T05:17:20Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Good morning....</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>14</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>j4be</string>
+			<key>DateLastUsed</key>
+			<string>2010-01-11T10:33:49Z</string>
+			<key>Modification Date</key>
+			<string>2008-08-15T12:12:55Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Java SE for Business</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>644</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>j4bt</string>
+			<key>Creation Date</key>
+			<string>2009-09-24T17:12:40Z</string>
+			<key>DateLastUsed</key>
+			<string>2010-04-06T05:16:44Z</string>
+			<key>Modification Date</key>
+			<string>2009-09-24T17:12:58Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Java for Business Team</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>62</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>jese</string>
+			<key>DateLastUsed</key>
+			<string>2009-09-10T18:13:34Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Java SE Engineering - Sustaining</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>154</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>jmpp</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Java Multi-Platform Support Offering</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>jvso</string>
+			<key>DateLastUsed</key>
+			<string>2009-10-28T15:54:15Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Java Vintage Support Offering</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>40</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>mccn</string>
+			<key>DateLastUsed</key>
+			<string>2010-03-31T06:34:45Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>my conference call number: Dial In       : x20245 or 1 (866) 545 5227
+ Pass Code     : 4 39 24 79
+ Host Code     : Stephen/Owen/Mark
+ International : 1 (215) 446 3648</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>176</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>mhome</string>
+			<key>DateLastUsed</key>
+			<string>2009-10-13T12:42:24Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>603-886-7983</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>18</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>mscn</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>(866)-545-5218 / 8111888
+(213)-787-0524
+x 44403</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>msum</string>
+			<key>Creation Date</key>
+			<string>2008-08-07T12:11:48Z</string>
+			<key>DateLastUsed</key>
+			<string>2008-08-08T06:44:45Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2008-08-13T07:46:09Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>CUSTOMER: XXXX 
+  / 5-Linux
+  STATUSLINE
+  http://esc.sfbay.sun.com/esc.cgi?esc=ESC
+</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>nosoup</string>
+			<key>Creation Date</key>
+			<string>2008-08-29T10:49:54Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-11-16T07:49:36Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>"Um, excuse me, I - I think you forgot my bread."
+    "Bread, two dollars extra."
+"Two dollars? But everyone in front of me got free bread."
+    "You want bread?"
+"Yes, please."
+    "Three dollars!"
+"What?"
+    "No soup for you!"</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>18</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>rats</string>
+			<key>DateLastUsed</key>
+			<string>2009-12-07T11:20:38Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Regards &amp; Thanks,
+
+Stephen
+
+--
+</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>230</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>rccn</string>
+			<key>DateLastUsed</key>
+			<string>2009-12-23T13:00:40Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Where: Roger's Concall information:
+Dial In: x44404 or 1 (866) 651-9314
+Passcode: 617 316 4 #
+Host: Roger
+International: (213) 787 0526</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>28</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>Rs</string>
+			<key>DateLastUsed</key>
+			<string>2010-04-07T15:33:29Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Regards,
+
+Stephen
+</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>1608</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>rsj</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Regards,
+
+Stephen
+Java SE Engineering - Sustaining </string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>scf</string>
+			<key>DateLastUsed</key>
+			<string>2009-12-28T21:13:33Z</string>
+			<key>Option</key>
+			<string></string>
+			<key>Plain Text</key>
+			<string>Stephen Fitch</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>1</string>
+			<key>TotUsed</key>
+			<integer>62</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>situout</string>
+			<key>Creation Date</key>
+			<string>2008-10-10T12:36:41Z</string>
+			<key>DateLastUsed</key>
+			<string>2008-10-10T12:38:28Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2008-10-10T12:36:59Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>
+--------------------------------------------
+Key #s / People
+---------------
+
+ Internal
+  - 
+  
+ Customer/Joint
+  - 
+  
+ Contacts
+  - 
+ 
+--------------------------------------------
+High Level Status - Exec Summary
+--------------------------------
+
+ CUSTOMER            : PRODUCT             : Java SE STATE               : ESC ID              : Bug ID              : SVCS Case ID        : START DATES         : CASE: dd-mmm-yy - 
+                     : JPSE: dd-mmm-yy PROBLEM DESCRIPTION : - - IMPACT: CURRENT STATUS      : *** ACTION PLAN         : *** FULL DETAILS        :  http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid=  http://esc.sfbay.sun.com/esc.cgi?esc=  http://monaco.sfbay/detail.jsf?cr= JPSE CONTACTS       :  
+ ---
+ 
+ CUSTOMER: NAME
+ / 5-L-SVC-ENG
+  Case : http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid=
+  Esc  : http://esc.sfbay.sun.com/esc.cgi?esc=
+  Bug  : http://monaco.sfbay/detail.jsf?cr=
+  Alert: 
+  Rel  :
+  Con  : 
+  
+--------------------------------------------
+History / Chronology
+--------------------
+
+  |
+  |
+  +--
+  |
+  |
+        
+--------------------------------------------
+Owners
+------
+
+ DATA_GOES_HERE
+ 
+-------------------------------------------- 
+Cores
+-----
+
+ DATA_GOES_HERE
+ 
+--------------------------------------------
+Workaround Map 
+--------------
+
+ DATA_GOES_HERE
+ 
+--------------------------------------------
+Bugs 
+----
+
+ DATA_GOES_HERE
+ 
+--------------------------------------------
+Background 
+----------
+
+ DATA_GOES_HERE
+ </string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>sola</string>
+			<key>DateLastUsed</key>
+			<string>2008-12-01T08:09:25Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Solaris</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>sp;</string>
+			<key>Creation Date</key>
+			<string>2009-04-06T11:20:45Z</string>
+			<key>DateLastUsed</key>
+			<string>2009-04-06T11:21:44Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2009-04-06T11:21:35Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Stephen</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>stv</string>
+			<key>Creation Date</key>
+			<string>2008-08-02T09:34:09Z</string>
+			<key>Label</key>
+			<string></string>
+			<key>Modification Date</key>
+			<string>2008-08-02T09:34:31Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>
+Stephen</string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>ts</string>
+			<key>DateLastUsed</key>
+			<string>2010-04-02T12:23:47Z</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Thanks,
+
+Stephen</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+			<key>TotUsed</key>
+			<integer>180</integer>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>tz3</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>TZUT-v1.3.1</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>tz4</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>TZUT-14x+</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>tzut3</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>TimeZone Updater Tool for v1.3.1</string>
+			<key>Service</key>
+			<string></string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>tzut4</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>TimeZone Updater Tool for v1.4.x and above</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>Abbreviation</key>
+			<string>umlut</string>
+			<key>Option</key>
+			<string>0</string>
+			<key>Plain Text</key>
+			<string>Ü</string>
+			<key>Service</key>
+			<string>Mail/Send To</string>
+			<key>SortOrder</key>
+			<string>0</string>
+		</dict>
+	</array>
+	<key>theAbbsFilePath</key>
+	<string>/Users/sfitch/bin/My TypeIt4Me abbreviations.typeit4me</string>
+</dict>
+</plist>

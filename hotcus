@@ -1,0 +1,17 @@
+#!/bin/bash
+
+~/bin/jtoascii 982 | grep ^CUSTOMER
+echo "========================="
+~/bin/jtoascii 982 | grep ^CUSTOMER | wc -l
+echo
+echo -----
+echo
+echo "Open Customer Issues"
+echo
+~/bin/jtoascii 982
+echo
+echo -----
+echo
+echo "Closed Customer Issues"
+echo
+~/bin/jtoascii 1000

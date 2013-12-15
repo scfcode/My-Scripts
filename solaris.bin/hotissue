@@ -1,0 +1,62 @@
+#!/bin/ksh
+
+read CUSTOMER?"Enter Customer Name: "
+
+read ESCID?"Enter Escalation ID: "
+read BUGID?"Enter Bug ID: "
+SVCID=`ckint -p "Enter SVCS CID: `
+read CONTRACT?"Enter Contract Type: "
+
+read PROBDESC?"Enter Problem Description: "
+read IMPACT?"Enter Business Impact Description: "
+read CURSTATUS?"Enter Current Status: "
+read ACTPLAN?"Enter Action Plan: "
+read CONTACTS?"Enter Contacts: "
+
+HEADER="List of SMI Alert types:"
+LIST="Not-on-Alert SMI-Local-Alert SMI-Management-Alert SMI-Executive-Alert"
+ALERT=`ckitem -W 60 -l "$HEADER" -p "$PROMPT" -d "all" -i "none" -n -m 99 $LIST`
+
+HEADER="List of Java Versions:"
+LIST="1.3.1_nn 1.4.2_nn 5.0"
+JAVAVER=`ckitem -W 60 -l "$HEADER" -p "$PROMPT" -d "all" -i "none" -n -m 99 $LIST`
+
+HEADER="List of Platforms:"
+LIST="Solaris Windows Linux All"
+PLATFORM=`ckitem -W 60 -l "$HEADER" -p "$PROMPT" -d "all" -i "none" -n -m 99 $LIST`
+
+cat <<ENDOFTEXT
+---
+<pre>
+
+ -------------------------------------------------------------------
+
+ CUSTOMER            : ${CUSTOMER}
+ PRODUCT             : ${JAVAVER} 
+ PLATFORM            : ${PLATFORM}
+ ALERT               : ${ALERT}
+ ESC ID              : ${ESCID}
+ Bug ID              : ${BUGID}
+ Case ID             : ${SVCID}
+ Contract            : ${CONTRACT}
+ PROBLEM DESCRIPTION : 
+   *** ${PROBDESC}
+   *** Impact: ${IMPACT}: 
+ CURRENT STATUS      : 
+   *** ${CURSTATUS}
+ ACTION PLAN         : 
+   *** ${ACTPLAN}
+
+ FULL DETAILS        : 
+
+   http://jurassic.eng.sun.com/~cb117521/cgi/esc.cgi?esc=${ESCID}
+   http://pts.red.iplanet.com/cgi-bin/radiance.pl?issueid=${SVCID}
+   http://monaco.sfbay/detail.jsp?cr=${BUGID}
+
+ CONTACTS            : ${CONTACTS}
+
+ -------------------------------------------------------------------
+
+</pre>
+---
+ENDOFTEXT

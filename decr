@@ -1,0 +1,5 @@
+:
+DIR=/Users/stephenfitch/Data/Home/home-secure
+/usr/local/bin/gpg -o ${DIR}/x --decrypt $1
+open -a Smultron ${DIR}/x
+sleep 5;/bin/rm -f ${DIR}/x

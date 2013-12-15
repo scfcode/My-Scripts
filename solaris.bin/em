@@ -1,0 +1,6 @@
+:
+#/bin/rm -f /local2/Inbox.msf
+#cd /l/p/mozilla/seamonkey/latest
+#exec /l/p/mozilla/seamonkey/latest/seamonkey -P default -mail &
+/bin/rm -f /local1/ns-mail/Inbox.msf
+exec /l/p/thunderbird/1.5.0.7/thunderbird &

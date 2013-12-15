@@ -1,0 +1,3 @@
+#!
+/usr/bin/zip -9 /Volumes/BACKUP/INBOX /Users/sfitch/Library/Thunderbird/Profiles/6g7tns11.default/ImapMail/mail-sfbay.sun.com/INBOX
+/bin/ls -l /Volumes/BACKUP

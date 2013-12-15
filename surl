@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SURL=`echo $1 | cut -d'=' -f2`
+
+EURL=$(echo -n $1 | \
+perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg');
+
+#curl "http://surl.eng.sun.com/add?s=${SURL}&${URL}&p=1"
+echo  "http://surl.eng.sun.com/add?s=${SURL}&${EURL}&p=1"

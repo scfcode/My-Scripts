@@ -1,0 +1,6 @@
+:
+DB=~/Desktop/Home/home-secure/keepassdb1
+BU=~/Desktop/Home/home-secure/keepassdb1.backup
+
+cp $DB $BU
+open $DB

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+case "$1" in
+'m')
+        mount sura.sfbay.sun.com:/l /Users/stephenfitch/mountpoints/sura/l
+        mount sura.sfbay.sun.com:/local1 /Users/stephenfitch/mountpoints/sura/local1
+        mount sura.sfbay.sun.com:/local2 /Users/stephenfitch/mountpoints/sura/local2
+        ;;
+
+'u')
+        umount sura.sfbay.sun.com:/l
+#        umount sura.sfbay.sun.com:/local1
+        ;;
+
+*)
+        echo "Usage: $0 { m | u }"
+        exit 1
+        ;;
+
+esac
+exit 0

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ENTRY="/Users/stephenfitch/Documents/Journler/Journler Entries/Entry $1/_Text.jrtfd/Entry.rtfd/TXT.rtf"
+
+textutil -cat txt "${ENTRY}" -stdout

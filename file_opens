@@ -1,0 +1,2 @@
+:
+sudo dtrace -s file_opens.dtrace

@@ -1,0 +1,13 @@
+#! /bin/bash
+# isoburn - burn a CD-R using ISO/Joliet
+
+hdiutil=/usr/bin/hdiutil
+image=/tmp/cdr$$.iso
+source=$1
+
+echo "Source: $source"
+
+$hdiutil makehybrid -iso -joliet -o $image "$source"
+$hdiutil burn $image -forceclose -noeject
+
+rm $image

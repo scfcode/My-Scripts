@@ -1,0 +1,2 @@
+:
+ssh -l sfitch jpsescf.sfbay.sun.com 'bin/vplist'

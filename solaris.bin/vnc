@@ -1,0 +1,258 @@
+#!/bin/sh
+
+### usage() shows correct usage and exits with failure status.
+
+usage () {
+    cat 1>&2 <<-@@
+
+		/net/hestia.sfbay/u0/tools/bin/vnc
+
+		usage: vnc start [ -geometry Geometry ] [ -depth Depth ] [ ConfName ]
+		                                   to start a conference
+		usage: vnc end     [ ConfName ]    to end a conference
+		usage: vnc view    [ ConfName ]    to passively view a conference
+		usage: vnc join    [ ConfName ]    to actively join a conference
+		usage: vnc display [ ConfName ]    to show the display for a conference
+		usage: vnc conf    [ Display  ]    to show the conference for the
+		                                     specified display, or \$DISPLAY
+		usage: vnc mine                    to show my conferences
+
+		This is a conferencing facility based on VNC, the Virtual Network
+		Computer software available on the web.  Start a conference,
+		giving it a name and password.  Then tell people to view or join
+		the conference, giving them the name and password.
+
+		The conference must be ended from the same host it was started on.
+
+		NOTE: SunForum is a more sophisticated conferencing solution, but:
+		 - it must be installed on the host of each participant
+		 - you may only be in one SunForum conference at a time
+		 - you have to continually give permission to collaborate
+        
+		VNC is also useful for sharing work between yourself at work and
+		yourself at home.
+
+		You can control which applications get started up, and even
+		which window manager is used, by editing your ~/.vnc/xstartup
+		file, which gets created when you start your first conference.
+		Of course, the edits only affect subsequent conferences.
+
+		To connect to the desktop with the Windows VNC client, you
+		will have to use the display name as returned by "vnc display".
+		With that client, CTRL-Insert = Copy and Shift-Insert = Paste.
+
+		The start subcommand takes a couple of options:
+
+		  -geometry Geometry    -geometry 1024x768 sets width=1024, height=768
+
+		  -depth Depth          -depth  8   is faster but has fewer colors
+		                        -depth 32   is slower but can handle any color
+
+		Example:
+
+		  % vnc start FredStaffMtg
+		  Password: fred.pwd
+		  Verify:   fred.pwd
+		  Conference FredStaffMtg created; display = fredshost.sfbay:3
+
+		  % vnc join FredStaffMtg
+		  VNC server supports protocol version 3.3 (viewer 3.3)
+		  Password: fred.pwd
+		  <a lot of gobbledygook>
+
+		  % vnc end FredStaffMtg
+		  Killing Xvnc process ID 12826
+
+	@@
+    exit 1
+}
+
+### die( message ) shows the message on stderr and exits with failure status.
+
+die () {
+    echo 1>&2 "\nvnc: Error - $@\n"
+    exit 1
+}
+
+### Exit with a message and error status unless the conference in $conf exists.
+
+ensureConferenceExists() {
+    [ $existing = Y ] || die "no such conference: $conf"
+}
+
+### getDomain() gets the part of the domain name right before .sun.com, e.g. sfbay.
+
+getDomain () {
+    domainname \
+    | tr '[A-Z]' '[a-z]' \
+    | sed -e 's/\.sun\.com//' -e 's/.*\.//'
+}
+
+### getConferenceName( RemainingParameters ) gets the conference name
+### if one was not specified and sets $existing to Y or N.
+
+getConferenceName () {
+
+    ### If no conference was specified on the command line, ask.
+    case $# in
+         0) echo "\nConferences in progress:"
+            (cd $conferences && ls | sed 's/^/	/')
+            echo "\nEnter name of conference to $action: \c"
+            read conf
+            ;;
+         1) conf="$1"
+            ;;
+         *) usage
+            ;;
+    esac
+
+
+    ### Set $existing to indicate whether the conference exists.
+    existing=N
+    [ -f "$conferences/$conf" ] && existing=Y
+}
+
+### Create a conference.
+
+createConference () {
+
+    [ $existing = N ] || die "conference already exists: $conf"
+
+    ### Set the password.
+    vncpasswd || exit 1
+
+    ### Start the server and store the display name in a conference file.
+    results=`vncserver -name "\"$conf\"" $depth $geometry -alwaysshared -deferupdate 40 -nolisten local 2>&1`
+    display=`echo "$results" | sed -n 's/^New .* desktop is \(.*\)/\1/p'`
+    [ -n "$display" ] || die "failed to create VNC server; details:\n$results"
+    domain=`getDomain`
+    echo "$display" | sed "s/:/.$domain:/" > "$conferences/$conf"
+    chmod a+r "$conferences/$conf"
+    echo "Conference $conf created; display =" `cat "$conferences/$conf"`
+}
+
+### End a conference.
+
+endConference () {
+
+    ensureConferenceExists
+
+    ### Get the display to use and kill the conference.
+    ### Note that we want to remove the $conf file only after
+    ### we are successful in killing the server.  However,
+    ### if this program is being run from within the conference
+    ### being ended, we have to guard against SIGHUP or we'll
+    ### never remove the file.  Might as well guard against
+    ### other potential signals as well.
+    touch "$conferences/$conf" 2>/dev/null \
+    || die "only conference starter may end conference"
+    display=`sed 's/\..*:/:/' "$conferences/$conf"`
+    trap '' 1 2 3 15  # make sure we remove that file afterwards
+    vncserver -kill "$display" \
+    || die "must be on host where conference was started."
+    rm "$conferences/$conf"
+}
+
+### Join (or view) a conference already started.
+### joinConference ArgToViewer ...
+
+joinConference () {
+
+    ensureConferenceExists
+
+    ### Get the display to use and join the conference.
+    display=`cat "$conferences/$conf"`
+    exec vncviewer -shared "$@" "$display"
+}
+
+### Show the DISPLAY associated with a conference.
+
+showConferenceDisplay() {
+
+    ensureConferenceExists
+
+    ### Cat the conference file, which contains the display.
+    cat "$conferences/$conf"
+}
+
+### Show which conference is associated with the specified display,
+### or DISPLAY.
+
+whichConference() {
+
+    display="$conf"  # we use that arg for another purpose (sorry!)
+    [ -n "$display" ] || display="$DISPLAY"
+
+    ### If the display does not contain the domain, add ours.
+    case "$display" in
+        *.*:*) ;;
+            *) domain=`getDomain`
+               display=`echo "$display" | sed "s/:/.$domain:/"`
+               ;;
+    esac
+
+    ### If the display contains a screen number, get rid of it.
+    case "$display" in
+        *:*.*) display=`echo "$display" | sed 's/\.[^.]*$//'`
+               ;;
+    esac
+
+    ### Now look for a conference with that as its display.
+    ### Include /dev/null so that fgrep will always display the filename.
+    cd "$conferences" && fgrep "$display" /dev/null * | sed 's/:.*//'
+}
+
+### Show conferences for this user.
+
+myConferences() {
+
+    cd "$conferences"
+    echo "Conferences for user $LOGNAME:"
+    find . -user "$LOGNAME" | sed 's:^\./:    :'
+}
+
+
+###############################################################################
+
+PATH="/net/hestia.sfbay.sun.com/u0/tools/bin:$PATH" export PATH
+conferences=/net/hestia.sfbay.sun.com/u0/vnc_conferences
+
+### Make sure the user has a ~/.vnc directory.
+[ -d $HOME/.vnc ] || mkdir $HOME/.vnc || die "can't create $HOME/.vnc"
+
+### See what they want done, and do it.
+[ $# = 0 ] && usage
+action="$1"
+shift
+case "$action" in
+
+    start) geometry=
+           depth="-depth 24"
+           while :; do
+               case "$1" in
+                   -geometry) [ -n "$2" ] || usage; geometry="-geometry $2";;
+                      -depth) [ -n "$2" ] || usage;    depth="-depth $2";;
+                          -*) usage;;
+                           *) break;;
+               esac
+               shift 2
+           done
+           getConferenceName "$@"; createConference
+           ;;
+      end) getConferenceName "$@"; endConference
+           ;;
+     view) getConferenceName "$@"; joinConference -viewonly
+           ;;
+     join) getConferenceName "$@"; joinConference
+           ;;
+  display) getConferenceName "$@"; showConferenceDisplay
+           ;;
+     conf) getConferenceName "$@"; whichConference
+           ;;
+     mine) [ $# = 0 ] || usage; myConferences
+           ;;
+        *) usage
+           ;;
+esac
+
+exit 0

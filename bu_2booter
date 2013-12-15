@@ -1,0 +1,8 @@
+:
+BUDIR=/Users/stephenfitch/mountpoints/booter_backup/backup/mac/Backup-`date "+%m%d%y"`
+BUFILE=${BUDIR}/backup-`date "+%m%d%y"`.tar
+BULIST=/Users/stephenfitch/bin/bufile.list
+
+mkdir -p ${BUDIR}
+
+tar cvf ${BUFILE} -T ${BULIST}

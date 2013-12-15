@@ -1,0 +1,8 @@
+:
+BUDIR=/Users/stephenfitch/Desktop/Backup-`date "+%m%d%y"`
+BUFILE=${BUDIR}/backup-`date "+%m%d%y"`.tar
+BULIST=/Users/stephenfitch/bin/bufile.list
+
+mkdir -p ${BUDIR}
+
+tar cvf ${BUDIR}/${BUFILE} -T ${BULIST}

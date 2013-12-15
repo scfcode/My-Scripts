@@ -1,0 +1,16 @@
+:
+cd /home/sfitch
+rm -f LYD 
+ln -s /web-docs/yd/`date +%Y`/`date +%m` LYD
+cd /home/sfitch/Documents
+rm -f LYD
+ln -s /web-docs/yd/`date +%Y`/`date +%m` LYD
+cd /web-docs
+rm -f lyd
+ln -s /web-docs/yd/`date +%Y`/`date +%m` lyd
+cd /web-docs/yd
+rm -f lyd
+ln -s /web-docs/yd/`date +%Y`/`date +%m` lyd
+cd /tmp
+rm -f lyd
+ln -s /web-docs/yd/`date +%Y`/`date +%m` lyd

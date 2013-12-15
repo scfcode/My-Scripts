@@ -1,0 +1,47 @@
+#!/bin/ksh
+
+read CUSTOMER?"Enter Customer Name: "
+
+read ESCID?"Enter Escalation ID: "
+BUGID=`ckint -p "Enter Bug ID: `
+SVCID=`ckint -p "Enter SVCS CID: `
+
+read PROBDESC?"Enter Problem Description: "
+read CURSTATUS?"Enter Current Status: "
+read ACTPLAN?"Enter Action Plan: "
+read CONTACT?"Enter Contacts: "
+
+HEADER="List of SMI Alert types:"
+LIST="No-Alert SMI-Local-Alert SMI-Management-Alert SMI-Executive-Alert"
+ALERT=`ckitem -W 60 -l "$HEADER" -p "$PROMPT" -d "all" -i "none" -n -m 99 $LIST`
+
+HEADER="List of Java Versions:"
+LIST="1.3.1_nn 1.4.2_nn 5.0"
+JAVAVER=`ckitem -W 60 -l "$HEADER" -p "$PROMPT" -d "all" -i "none" -n -m 99 $LIST`
+
+cat <<ENDOFTEXT
+
+ -------------------------------------------------------------------
+
+ CUSTOMER            : ${CUSTOMER}
+ PRODUCT             : ${JAVAVER} 
+ STATE               : ${ALERT}
+ ESC ID              : ${ESCID}
+ Bug ID              : ${BUGID}
+ SVCS Case ID        : ${SVCID}
+ PROBLEM DESCRIPTION : 
+     - ${PROBDESC}
+ CURRENT STATUS      : 
+     - ${CURSTATUS}
+ ACTION PLAN         : 
+     - ${ACTPLAN}
+
+ FULL DETAILS        : 
+
+   http://jurassic.eng.sun.com/~cb117521/cgi/esc.cgi?esc=${ESCID}
+   http://monaco.sfbay/detail.jsp?cr=${BUGID}
+
+ CONTACT             : ${CONTACT}
+
+ -------------------------------------------------------------------
+ENDOFTEXT

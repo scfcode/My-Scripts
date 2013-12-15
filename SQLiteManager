@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/Applications/Firefox.app/Contents/MacOS/firefox-bin -app ~/Downloads/Applications/SQLiteManager_XR_0.3.11/application.ini

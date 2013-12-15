@@ -1,0 +1,8 @@
+#!/bin/sh
+osascript <<77
+tell application "Finder" 
+ try
+	 mount volume "cifs://workgroup;backup@booter/pool_fs_backupcm"
+ end try
+end tell
+77

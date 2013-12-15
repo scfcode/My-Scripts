@@ -1,0 +1,3 @@
+:
+cd $HOME/p/textclock
+/usr/bin/java -cp . textclock.TextClock

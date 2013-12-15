@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/opt/local/bin/wine C:\PROG~FBU\COPE~PZL\COPE~KDR.EXE &

@@ -1,0 +1,92 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use HTML::Parser;
+use LWP::Parallel::UserAgent;
+use HTTP::Request::Common;
+
+$^I = "~";
+@ARGV = "-" unless @ARGV;       # act as filter if no names specified
+while (@ARGV) {
+$_ = do { local $/; <> };
+
+my $urls = extract_links($_);
+
+validate_links($urls);
+
+rewrite_html($_, $urls);
+}
+
+sub extract_links {
+my $html = shift;
+
+my %urls;
+
+my $p = HTML::Parser->new
+(
+ start_h =>
+ [sub {
+    my ($tagname, $attr) = @_;
+    return unless $tagname eq "a" and my $href = $attr->{href};
+    $urls{$href} = "";
+  }, "tagname, attr"],
+) or die;
+
+$p->parse($html);
+$p->eof;
+
+return \%urls;
+}
+
+sub validate_links {
+my $urls = shift;             # hashref
+
+my $pua = LWP::Parallel::UserAgent->new(max_size => 1);
+
+while (my ($url) = each %$urls) {
+$pua->register(GET $url);
+}
+
+for my $entry (values %{$pua->wait(30)}) {
+my $url = $entry->request->url;
+my $success = $entry->response->is_success;
+warn +($urls->{$url} = $success ? "LIVE" : "DEAD"), ": $url\n";
+}
+
+# return void
+}
+
+sub rewrite_html {
+my $html = shift;
+my $urls = shift;             # hashref
+
+my $dead = 0;                 # mark the next text as "DEAD -"
+
+my $p = HTML::Parser->new
+(
+ start_h =>
+ [sub {
+    my ($text, $tagname, $attr) = @_;
+    if ($tagname eq "a" and my $href = $attr->{href}) {
+      $dead = 1 if $urls->{$href} eq "DEAD";
+    }
+    print $text;
+  }, "text, tagname, attr"],
+ text_h =>
+ [sub {
+    my ($text) = @_;
+    if ($dead) {
+      $text = "DEAD - $text" unless $text =~ /DEAD -/;
+      $dead = 0;
+    }
+    print $text;
+  }, "text"],
+ default_h =>
+ [sub { print shift }, 'text'],
+) or die;
+
+$p->parse($html);
+$p->eof;
+# return void
+}
